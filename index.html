@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kushal B | Portfolio</title>
+      <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <!-- Navbar Start -->
+      <header class="navbar transparent" id="navbar">
+         <div class="container ">
+            <a href="#home" class="logo animated-fade-down" aria-label="Logo">
+            <img src="assets/Kushal.svg" alt="Logo" width="60">
+            </a>
+            <nav class="nav-links animated-fade-down">
+               <ul>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#experience">Experience</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#contact">Contact</a></li>
+               </ul>
+            </nav>
+            <nav id="mobile-nav" class="mobile-nav">
+               <ul>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#experience">Experience</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#contact">Contact</a></li>
+               </ul>
+            </nav>
+            <div class="nav-res-buttons animated-fade-down">
+               <a href="D:\Placement_preparation\Github repo\Portfolio\assets\Kushal B Resume.pdf" class="btn-get-resume" target="_blank" rel="noopener">Resume</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+               <svg viewBox="0 0 624 538" width="30" height="30" fill="none">
+                  <!-- Top Line: Left-aligned -->
+                  <path class="top-line" d="M50,450 H350" stroke="white" stroke-width="60" stroke-linecap="round"/>
+                  <!-- Middle Line: Centered -->
+                  <path class="middle-line" d="M50,270 H550" stroke="white" stroke-width="60" stroke-linecap="round"/>
+                  <!-- Bottom Line: Right-aligned -->
+                  <path class="bottom-line" d="M250,90 H550" stroke="white" stroke-width="60" stroke-linecap="round"/>
+               </svg>
+            </button>
+         </div>
+      </header>
+      <!-- Navbar End -->
+      <!-- Hero Section -->
+      <section id="home" class="hero-section d-flex align-items-center justify-content-start text-white">
+         <div class="container animated-fade-up">
+            <h1 class="display-3 fw-bold">Hi, I'm Kushal B</h1>
+            <p class="lead" style="max-width: 400px;">It's my passion to translate design into code with great attention to details and solve complicated problems with simple solutions.</p>
+            <div class="res-buttons">
+               <a href="D:\Placement_preparation\Github repo\Portfolio\assets\Kushal B Resume.pdf" class="btn-get-resume" target="_blank" rel="noopener">Resume</a>
+            </div>
+         </div>
+      </section>
+      <!-- About Section -->
+      <section id="about" class="section custom-about-bg text-white py-5">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-md-6">
+                  <img src="assets/profile.jpg" class="img-fluid rounded" alt="Kushal Profile" />
+               </div>
+               <div class="col-md-6">
+                  <h2>About Me</h2>
+                  <p>
+                     Recent Computer Science Engineering graduate with hands-on experience in Artificial Intelligence (AI), Machine Learning (ML), Cybersecurity, and Web Development. Strong foundation in software development, data structures, and system design, 
+                     Proficient in Python and JavaScript, with practical experience working in Unix/Linux environments and processing real-world datasets. Skilled in writing efficient SQL queries and developing scalable solutions through analytical thinking and logical problem-solving.
+                     Eager to contribute to impactful engineering projects, collaborate with diverse teams, and continuously grow through innovation and lifelong learning.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Work Experience Section -->
+      <section id="experience" class="py-5 bg-black text-white">
+         <div class="container">
+            <h2 class="fw-bold mb-4 text-center">Experience</h2>
+            <div class="row">
+               <div class="col-12 mt-4 pt-2">
+                  <div class="timeline-page position-relative">
+                     <div class="timeline-item">
+                        <div class="row">
+                           <div class="col-lg-6 col-md-6 col-sm-6">
+                              <div class="duration date-label-left position-relative text-md-end">
+                                 <a href="https://yourseyva.com/" target="_blank" rel="noopener">
+                                 <img src="assets/your_seyva_logo.png" alt="your Seyva Logo" class="yourseyva-logo-icon">
+                                 </a>
+                                 <h2 class="my-2">Your seyva</h2>
+                                 <small class=" mb-0">Feb - Apr 2025</small>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0">
+                              <div class="event event-description-right float-left text-start">
+                                 <h4 class="title mb-1 ">Software Development Intern</h4>
+                                 <p class="timeline-subtitle mt-3 mb-0 ">Worked on backend development using PHP, focusing on API integration, bug fixing, and feature enhancements. Collaborated with the team to improve system performance and ensure secure access to admin functionalities, following clean coding practices and MVC architecture.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="timeline-item mt-5 pt-4">
+                        <div class="row">
+                           <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2 mt-4 mt-sm-0">
+                              <div class="event event-description-left float-left text-end">
+                                 <h4 class="title mb-1 ">AI - Machine Learning Engineer</h4>
+                                 <p class="timeline-subtitle mt-3 mb-0 ">Built a strong foundation in Python programming and explored AI/ML concepts, including prompt engineering and AI coding tools. Gained hands-on experience developing Flask-based web applications, working with databases, and understanding cloud computing and orchestration platforms.</p>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
+                              <div class="duration duration-right position-relative">
+                                 <a href="https://www.skillindiadigital.gov.in/home" target="_blank" rel="noopener">
+                                 <img src="assets/skill-india-logo.svg" alt="skill india Logo" class="skillinda-logo-icon">
+                                 </a>
+                                 <h2 class="my-2">Skill India</h2>
+                                 <small class=" mb-0">Oct - Jan 2025 </small>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--
+                        <div class="timeline-item mt-5 pt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0">
+                                    <div class="duration date-label-left position-relative text-md-end">
+                                        <i class="fab fa-apple fa-3x"></i>
+                                        <h2 class="my-2">Apple Inc.</h2>
+                                        <small class=" mb-0">2016-18</small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0">
+                                    <div class="event event-description-right float-left text-start">
+                                        <h4 class="title mb-1 ">Jr. UX / UI Designer</h4>
+                                        <p class="timeline-subtitle mt-3 mb-0 ">The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div> 
+                        
+                        <div class="timeline-item mt-5 pt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2 mt-4 mt-sm-0">
+                                    <div class="event event-description-left float-left text-end">
+                                        <h4 class="title mb-1 ">Front-end Web Designer</h4>
+                                        <p class="timeline-subtitle mt-3 mb-0 ">The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
+                                    <div class="duration duration-right position-relative">
+                                        <i class="fab fa-windows fa-3x"></i>
+                                        <h2 class="my-2">Microsoft Inc.</h2>
+                                        <small class=" mb-0">2015-16</small>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div> 
+                        -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="projects" class="project-scroll-section">
+         <div class="container container-projects">
+            <h2 class="fw-bold mb-4 text-center">Projects</h2>
+            <div class="project-card">
+               <div class="row align-items-center">
+                  <div class="col-md-6">
+                     <h2>Project 1: PixelOutPDF</h2>
+                     <p>PixelOutPDF is a lightweight Streamlit app that allows users to remove specific images like watermarks, logos, stamps, or overlays from PDF documents. This is particularly useful when working with scanned or watermarked PDFs in regional languages such as Kannada.</p>
+                     <div class="project-links">
+                        <a href="https://github.com/mekhush/PixelOutPDF" class="btn-get-project" target="_blank" rel="noopener">Github</a>
+                        <a href="https://pixeloutpdf.streamlit.app/" class="btn-get-project" target="_blank" rel="noopener">Live Demo</a>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <img src="assets/project_card_BG.webp" alt="Sentiment Analysis Logo" class="project-img">
+                  </div>
+               </div>
+            </div>
+            <div class="project-card">
+               <div class="row align-items-center">
+                  <div class="col-md-6">
+                     <img src="assets/project_card_BG.webp" alt="Cartoonization Demo" class="project-img">
+                  </div>
+                  <div class="col-md-6">
+                     <h2>Project 2: Portfolio Website</h2>
+                     <p>Fully responsive personal portfolio website built using HTML, CSS, and Bootstrap, featuring smooth interactive 3D integration with Spline.</p>
+                     <p>Fun fact: You're already exploring the project in real time.</p>
+                     <div class="project-links">
+                        <a href="https://github.com/mekhush/portfolio" class="btn-get-project" target="_blank" rel="noopener">Github</a>
+                        <a href="https://mekhush.github.io/" class="btn-get-project" target="_blank" rel="noopener">Live Demo</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--
+            <div class="project-card">
+               <div class="row align-items-center">
+                  <div class="col-md-6">
+                     <h2>Project 3: History Cleanse</h2>
+                     <p>Part of a case handling initiative to clean sensitive user history data using custom filters and NLP tools.</p>
+                     <div class="project-links">
+                        <a href="https://github.com/mekhush/history-cleanse" class="btn-get-project" target="_blank" rel="noopener">Github</a>
+                        <a href="https://github.com/mekhush/history-cleanse" class="btn-get-project" target="_blank" rel="noopener">Live Demo</a>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <img src="assets/project_card_BG.webp" alt="History Cleanse" class="project-img">
+                  </div>
+               </div>
+            </div>
+            <div class="project-card">
+               <div class="row align-items-center">
+                  <div class="col-md-6">
+                     <img src="assets/project_card_BG.webp" alt="Portfolio Website Screenshot" class="project-img">
+                  </div>
+                  <div class="col-md-6">
+                     <h2>Project 4: Portfolio Website</h2>
+                     <p>Fully responsive personal site using HTML, CSS, Bootstrap, and Spline 3D integration.</p>
+                     <div class="project-links">
+                        <a href="https://github.com/mekhush/portfolio" class="btn-get-project" target="_blank" rel="noopener">Github</a>
+                        <a href="https://mekhush.github.io/" class="btn-get-project" target="_blank" rel="noopener">Live Demo</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            -->
+         </div>
+      </section>
+      <!-- Skills Section -->
+      <section id="skills" class="section bg-black text-white py-5">
+         <div class="container">
+            <h2 class="fw-bold text-center mb-5">My Skills</h2>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="progress-bar-main progress-bar-style2">
+                     <div class="progress-bar-sub">
+                        <div class="progress">
+                           <div class="progress-bar bg-white" data-progress="90"><span>90%</span></div>
+                        </div>
+                        <div class="progress-name"><strong>HTML</strong></div>
+                     </div>
+                     <div class="progress-bar-sub">
+                        <div class="progress">
+                           <div class="progress-bar bg-white" data-progress="85"><span>85%</span></div>
+                        </div>
+                        <div class="progress-name"><strong>CSS</strong></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="progress-bar-main progress-bar-style2">
+                     <div class="progress-bar-sub">
+                        <div class="progress">
+                           <div class="progress-bar bg-white" data-progress="75"><span>75%</span></div>
+                        </div>
+                        <div class="progress-name"><strong>JavaScript</strong></div>
+                     </div>
+                     <div class="progress-bar-sub">
+                        <div class="progress">
+                           <div class="progress-bar bg-white" data-progress="70"><span>70%</span></div>
+                        </div>
+                        <div class="progress-name"><strong>Python</strong></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="section py-5 custom-contact-bg text-white">
+         <div class="container text-center">
+            <h2 class="fw-bold mb-4">Contact Me</h2>
+            <!-- Contact Form -->
+            <form id="contact-form" class="row g-3 justify-content-center">
+               <input type="hidden" name="access_key" value="acd3749c-decc-4d9d-917b-0354a4f993fa" />
+               <input type="checkbox" name="botcheck" style="display: none;" />
+               <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+               </div>
+               <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+               </div>
+               <div class="col-12">
+                  <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+               </div>
+               <div class="col-12">
+                  <button type="submit" class="btn-submit mt-3">Send Message</button>
+               </div>
+               <div id="form-message" class="mt-3 text-white fw-bold"></div>
+            </form>
+            <!-- Direct Contact Info -->
+            <p class="mt-4">Or</p>
+            <p>
+               <i class="fa-solid fa-paper-plane"></i>
+               <a href="mailto:kushalkush1804@gmail.com" class="text-white">kushalkush1804@gmail.com</a>
+            </p>
+            <p>
+               <i class="fa-solid fa-phone"></i>
+               <a href="tel:+916362546033" class="text-white">+91 63625 46033</a>
+            </p>
+            <div class="social-icons mt-4">
+               <a href="https://github.com/mekhush" target="_blank" rel="noopener" class="text-white me-3 fs-4">
+               <i class="fab fa-github"></i>
+               </a>
+               <a href="https://www.instagram.com/me_khush" target="_blank" rel="noopener" class="text-white me-3 fs-4">
+               <i class="fab fa-instagram"></i>
+               </a>
+               <a href="https://www.linkedin.com/in/me-khush" target="_blank" rel="noopener" class="text-white fs-4">
+               <i class="fab fa-linkedin"></i>
+               </a>
+            </div>
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer class="footer bg-black text-center text-white py-3">
+         <div class="container">
+            <p>&copy; 2025 Kushal B. All rights reserved.</p>
+         </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="script.js"></script>
+   </body>
+</html>

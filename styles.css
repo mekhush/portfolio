@@ -1,0 +1,715 @@
+/* General Reset & Font */
+@font-face {
+  font-family: Polly-Rounded;
+  src: url('assets/fonts/PollyRounded-Thin.woff2') format('woff2'),
+       url('assets/fonts/PollyRounded-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Polly-Rounded;
+  src: url('assets/fonts/PollyRounded-Light.woff2') format('woff2'),
+       url('assets/fonts/PollyRounded-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Polly-Rounded;
+  src: url('assets/fonts/PollyRounded-Regular.woff2') format('woff2'),
+       url('assets/fonts/PollyRounded-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Polly-Rounded;
+  src: url('assets/fonts/PollyRounded-Bold.woff2') format('woff2'),
+       url('assets/fonts/PollyRounded-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --main-black: #000000;
+  --main-white: #ffffff;
+  --main-opacity-1: #ffffff00;
+  --main-opacity-2: #ffffff0d;
+  --main-blur: blur(25px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: var(--main-black);
+  font-family: Polly-Rounded;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Prevent background scrolling when mobile nav is open */
+body.nav-open {
+  overflow: hidden;
+}
+
+/* This is the main content wrapper that holds everything except the navbar */
+#main-content {
+  position: relative; /* Establishes a stacking context */
+  z-index: 1; /* Ensures it's below the fixed navbar */
+  transition: filter 0.3s ease;
+}
+
+
+/* Navbar */
+/* Fully transparent at the top */
+.navbar.transparent {
+  background-color: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+}
+
+/* Semi-transparent after scrolling */
+.navbar.scrolled {
+  background-color: #ffffff00;
+  border-bottom: 1px solid #ffffff0d;
+  backdrop-filter: blur(25px);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  height: 60px;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Logo */
+.logo img {
+  height: 20px;
+  width: auto;
+}
+
+/* Nav links */
+.animated-fade-down {
+  animation: slideDownFade 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-60px); /* Start from above */
+}
+
+@keyframes slideDownFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links {
+  text-align: center;
+  flex: 1;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4f4f5;
+}
+
+/* Buttons */
+.nav-res-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+}
+
+.res-buttons{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+}
+.btn-get-resume {
+  position: relative;
+  background: linear-gradient(104deg, rgba(253, 253, 253, 0.05) 5%, rgba(240, 240, 228, 0.1) 100%);
+  border: 2px solid #ffffff0d;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  font-size: smaller;
+  font-weight: 400;
+  backdrop-filter: blur(25px);
+  transition: all 0.3s ease;
+}
+
+.btn-get-resume:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 8px #ffffff0d;
+}
+
+/* Mobile Navigation */
+.mobile-nav{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+  z-index: 999; 
+  background-color: #ffffff0d;
+  box-shadow: #d4d4d8;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease-in-out;
+}
+
+/* Slide the nav in when the body has the .nav-open class */
+body.nav-open .mobile-nav {
+  right: 0;
+}
+
+.mobile-nav li{
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  padding: 1rem 0;
+}
+.mobile-nav a{
+  width: 100%;
+  text-decoration: none;
+  color: #e4e4e7;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+.mobile-nav a:hover {
+    color: #ffffff;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    display: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.top-line,
+.middle-line,
+.bottom-line {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: center center;
+    stroke: var(--main-white);
+}
+
+body.nav-open .top-line {
+  transform: translateX(-130px) translateY(-125px) rotate(-45deg);
+}
+body.nav-open .middle-line {
+  transform: translateY(10px) rotate(45deg);
+}
+body.nav-open .bottom-line {
+  transform: translateX(130px) translateY(125px) rotate(-45deg);
+}
+
+/* When mobile nav is open, disable the navbar's own blur
+   to prevent rendering conflicts with the mobile nav's blur. */
+body.nav-open .navbar.scrolled {
+  backdrop-filter: none;
+  background-color: transparent; /* Also remove bg color for seamless effect */
+}
+
+
+/* Prevent clicking on main content when nav is open */
+body.nav-open #main-content {
+    pointer-events: none;
+}
+
+.menu-icon {
+  width: 28px;
+  height: 28px;
+  stroke: var(--main-white)
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-res-buttons {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section spline-viewer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2) translateX(300px); 
+}
+.animated-fade-up {
+  animation: slideUpFade 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+@media (max-width: 768px) {
+  .hero-section spline-viewer {
+    transform: scale(1.2) !important;
+  }
+  
+  .hero-section {
+    align-items: flex-start !important; /* override Bootstrap's align-items-center */
+  }
+
+  .hero-section .container {
+    padding-top: 4rem; /* Optional: add some spacing from the top */
+  }
+}
+
+
+
+/* Section about */
+#about h2{
+  font-weight: 700;
+}
+
+#about p {
+  font-weight: 300;
+}
+
+.custom-about-bg{
+  background-color: var(--main-black);
+}
+
+
+
+/* Section Experience */
+body {
+  margin-top: 20px;
+}
+
+#experience {
+  background-color: #000;
+  color: #fff;
+}
+
+#experience h4,
+#experience h5,
+#experience h6,
+#experience p,
+#experience small {
+  color: #fff;
+}
+
+.timeline-subtitle {
+  font-weight: 100;
+  color: #fff;
+}
+
+.yourseyva-logo-icon{
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.yourseyva-logo-icon:hover {
+  background-color: #0050FF; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease
+}
+
+.skillinda-logo-icon{
+  width: 100px;
+  height: 40px;
+  object-fit: contain; /* Keeps aspect ratio inside box */
+  border-radius: 8px;
+}
+.skillinda-logo-icon:hover {
+  background-color: var(--main-white); /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-page::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: -1px;
+  top: 0px;
+  width: 1px;
+  height: 100%;
+  margin: auto;
+  border-right: 2px dashed #ffffff !important; /* rounded dashed line */
+}
+
+.timeline-page .timeline-item .date-label-left:after,
+.timeline-page .timeline-item .date-label-left:before,
+.timeline-page .timeline-item .duration-right:after,
+.timeline-page .timeline-item .duration-right:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-page .timeline-item .date-label-left:after,
+.timeline-page .timeline-item .duration-right:after {
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  background-color: #f89d36; /* Keep orange highlight */
+}
+
+.timeline-page .timeline-item .date-label-left:before,
+.timeline-page .timeline-item .duration-right:before {
+  border: 2px dashed #ffffff; /* rounded dash line */
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background-color: #000; /* Black background */
+}
+
+.timeline-page .timeline-item .date-label-left {
+  float: right;
+  margin-right: 24px;
+}
+
+.timeline-page .timeline-item .date-label-left:after {
+  right: -41px;
+}
+
+.timeline-page .timeline-item .date-label-left:before {
+  right: -50px;
+}
+
+.timeline-page .timeline-item .duration-right {
+  float: left;
+  margin-left: 24px;
+}
+
+.timeline-page .timeline-item .duration-right:after {
+  left: -41px;
+}
+
+.timeline-page .timeline-item .duration-right:before {
+  left: -50px;
+}
+
+.timeline-page .timeline-item .event {
+  transition: all 0.2s ease;
+}
+
+.timeline-page .timeline-item .event .title {
+  font-weight: 700;
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.timeline-page .timeline-item .event.event-description-right {
+  text-align: left;
+  margin-left: 24px;
+}
+
+.timeline-page .timeline-item .event.event-description-left {
+  text-align: right;
+  margin-right: 24px;
+}
+
+
+/* Responsive Fixes */
+@media (max-width: 575px) {
+  .timeline-page {
+    margin-left: 18px;
+  }
+
+  .timeline-page::after {
+    margin: 0;
+    border-right: 2px dashed #ffffff !important;
+  }
+
+  .timeline-page .timeline-item .duration {
+    float: left !important;
+    margin-left: 30px !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
+
+  .timeline-page .timeline-item .duration:after {
+    left: -34px !important;
+  }
+
+  .timeline-page .timeline-item .duration:before {
+    left: -42px !important;
+  }
+
+  .timeline-page .timeline-item .duration .event {
+    text-align: left !important;
+    margin-left: 15px;
+  }
+
+  .timeline-page .timeline-item .event.event-description-left,
+  .timeline-page .timeline-item .event.event-description-right {
+    text-align: left !important;
+    margin: 0 0 0 30px !important;
+  }
+}
+
+/* Highlight Icon Color */
+.timeline-page .timeline-item .date-label-left:after {
+  background-color: #0050FF !important; /* Keep orange highlight */
+}
+
+/* Avatar & Utilities */
+.avatar.avatar-ex-small {
+  height: 36px;
+  width: 36px;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+/* Sticky Scroll Cards Section */
+
+.container-projects {
+  max-width: 1500px;
+}
+.project-scroll-section {
+  position: relative;
+  background: #000;
+  color: #fff;
+}
+
+.project-card {
+  position: sticky;
+  top: 20%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 60px 40px;
+  border-radius: 12px;
+  border: 2px solid var(--main-white);
+  background-color: var(--main-black);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+  margin-bottom: 10px;
+  z-index: 1;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.project-card:hover {
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+}
+
+.project-card.in-view {
+  opacity: 1;
+  transform: translateY();
+}
+
+.project-img {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--main-white);
+}
+
+.project-card p {
+  font-weight: 300;
+}
+
+.project-links{
+  display: flex;
+  margin-top: 20px;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+}
+.btn-get-project {
+  position: relative;
+  background: linear-gradient(104deg, rgba(253, 253, 253, 0.05) 5%, rgba(240, 240, 228, 0.1) 100%);
+  border: 2px solid #ffffff0d;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  font-size: smaller;
+  font-weight: 400;
+  backdrop-filter: blur(25px);
+  transition: all 0.3s ease;
+}
+
+.btn-get-project:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 8px #ffffff0d;
+}
+
+
+/* Skills */
+
+#skills {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Progress Bar (Linear) */
+.progress-bar-style2 .progress {
+  overflow: visible;
+  height: 5px;
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.progress-bar-style2 .progress-bar {
+  position: relative;
+  overflow: visible;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 0; /* start at 0 for animation */
+  transition: width 1.5s ease; /* Add transition here */
+}
+
+.progress-bar-style2 .progress-bar span {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: -25px;
+  font-size: 12px;
+  opacity: 0; /* hidden until animated */
+  transition: opacity 0.5s ease 1s; /* Add transition here */
+}
+
+.progress-bar-style2 .progress-name {
+  color: #ffffff;
+  margin: 5px 0 20px;
+  text-align: left;
+}
+
+
+/* Contact Section */
+#contact form .form-control {
+  background: linear-gradient(104deg, rgba(253, 253, 253, 0.05) 5%, rgba(240, 240, 228, 0.1) 100%);
+  border: 2px solid #ffffff0d;
+  color: #fff;
+}
+
+#contact form .form-control::placeholder {
+  color: #bbb;
+}
+
+.btn-submit {
+  position: relative;
+  background: linear-gradient(104deg, rgba(253, 253, 253, 0.05) 5%, rgba(240, 240, 228, 0.1) 100%);
+  border: 2px solid #ffffff0d;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  font-size: smaller;
+  font-weight: 400;
+  backdrop-filter: blur(25px);
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 8px #ffffff0d;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
