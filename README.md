@@ -27,6 +27,8 @@ You’re not just browsing — you're exploring the project *from inside itself*
 
 Showcasing my **skills**, **projects**, **experience**, and **contact information**, the site is optimized for **mobile-first design** and smooth transitions.
 
+<p align="right"><a href="#readme-top">⬆️</a></p>
+
 ---
 
 ### 🧱 Built With
@@ -38,7 +40,7 @@ Showcasing my **skills**, **projects**, **experience**, and **contact informatio
 [![Bootstrap][bootstrap-logo]][bootstrap-web]
 [![Font Awesome][fontawesome-logo]][fontawesome-web]
 
-
+<p align="right"><a href="#readme-top">⬆️</a></p>
 
 ---
 
@@ -52,12 +54,16 @@ Showcasing my **skills**, **projects**, **experience**, and **contact informatio
 - 🎨 Custom typography using Polly-Rounded
 - 🌙 Dark theme with soft gradients and blur effects
 
+<p align="right"><a href="#readme-top">⬆️</a></p>
+
 ---
 
 ## 🔗 Live Preview
 
 🌐 [View Live](https://mekhush.github.io/)  
 📦 [GitHub Repository](https://github.com/mekhush/portfolio)
+
+<p align="right"><a href="#readme-top">⬆️</a></p>
 
 ---
 
@@ -76,6 +82,7 @@ cd portfolio
 
 No build tools needed — everything is HTML/CSS/JS. Make sure you’re connected to the internet to load Bootstrap and Spline resources via CDN.
 
+<p align="right"><a href="#readme-top">⬆️</a></p>
 ---
 
 ## 🎯 Usage
@@ -85,6 +92,8 @@ No build tools needed — everything is HTML/CSS/JS. Make sure you’re connecte
 - Add or update projects in the **Projects** section
 - Replace the Spline links in `script.js` if using your own 3D models
 - Update contact form integration key (`access_key`) with your own from [Web3Forms](https://web3forms.com/)
+
+<p align="right"><a href="#readme-top">⬆️</a></p>
 
 ---
 
@@ -96,9 +105,7 @@ No build tools needed — everything is HTML/CSS/JS. Make sure you’re connecte
 [![GitHub][github-logo]][github-web]  
 [![LinkedIn][linkedin-logo]][linkedin-web]
 
-📧 [kushalkush1804@gmail.com](mailto:kushalkush1804@gmail.com)  
-🔗 [GitHub](https://github.com/mekhush)  
-🔗 [LinkedIn](https://www.linkedin.com/in/me-khush)
+<p align="right"><a href="#readme-top">⬆️</a></p>
 
 ---
 
@@ -110,6 +117,8 @@ No build tools needed — everything is HTML/CSS/JS. Make sure you’re connecte
 - [Web3Forms](https://web3forms.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+
+<p align="right"><a href="#readme-top">⬆️</a></p>
 
 ---
 
