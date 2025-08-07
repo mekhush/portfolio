@@ -44,7 +44,7 @@ function updateSplineAnimation() {
       :
       "https://prod.spline.design/ZBsHB6VBc2xNm4U0/scene.splinecode"; // desktop
 
-   import('https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js')
+   import('https://unpkg.com/@splinetool/viewer@1.10.42/build/spline-viewer.js')
       .then(() => {
          const splineViewer = document.createElement("spline-viewer");
          splineViewer.setAttribute("url", url);
@@ -145,4 +145,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 5000);
    });
 });
+
 // Contact form end
